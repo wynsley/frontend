@@ -1,11 +1,10 @@
 import { MyTemplate } from "../templates/myTemplate"
+import { Banner } from "../organisms/booking/banner"
 
 function BookingPage() {
   return (
     <MyTemplate>
-      <h2>
-        Reservas
-      </h2>
+      <Banner/>
     </MyTemplate>
   )
 }

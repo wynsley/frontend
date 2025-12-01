@@ -1,6 +1,5 @@
-import { Link } from "../atoms/links";
 import { NavbarLink } from "../atoms/navbarLink";
-import { Title } from "../atoms/titles";
+import { Logo } from "./logo";
 
 function NavbarMenu({ onLinkClick }) {
 
@@ -38,25 +37,7 @@ function NavbarMenu({ onLinkClick }) {
             />
           </li>
         ))}
-
-        <Link 
-          href="/" 
-          variant="secondary"
-          className=""
-        >
-          <img 
-            src="/LOGO.png" 
-            alt="Logo de la empresa" 
-            className="w-14 md:w-16 lg:w-20" 
-          />
-          <Title 
-            text={'BROUN COFFEE'}
-            level="h3"
-            variant="secondary"
-            weight="bold"
-            />
-        </Link>
-
+        <Logo/>
         {menu2.map((item, index) => (
           <li key={index}>
             <NavbarLink

@@ -4,6 +4,7 @@ function Button({
   className = '',
   type, 
   disabled,
+  children,
   variant = 'default',
 
 
@@ -15,7 +16,7 @@ function Button({
               active:scale-95
               transition-all duration-300
               shadow-md hover:shadow-lg`,
-    primary :'' //aca agregas mas estilos de botones y llamas por el nombre
+    primary :'text-[#ffff] cursor-pointer' 
   }
   return (
     <button 
@@ -27,7 +28,7 @@ function Button({
             type={type}
             disabled={disabled}
           >
-            {text}
+            {text || children}
           </button>
     )
 }

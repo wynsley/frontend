@@ -1,10 +1,10 @@
-import { TendenciesCard } from "../molecules/homeTendeciesCard";
+import { TendenciesCard } from "../../molecules/home/homeTendeciesCard";
 
-function TendenciesCakes() {
+function TendenciesCokies() {
   const tendenciesCoffee = [
     {
       img: '/TEN-COFFEE1.png',
-      title: 'Postre 1',
+      title: 'Café Espresso',
       description:
         'Intenso y concentrado, es la base perfecta para muchas bebidas clásicas.',
     },
@@ -12,13 +12,13 @@ function TendenciesCakes() {
       img: '/TEN-COFFEE2.png',
       title: 'Café Latte',
       description:
-        'Su suave mezcla de espresso con leche lo hace cremoso y muy equilibrado.',
+        'Suave y cremoso, mezcla armoniosa de espresso con abundante leche.',
     },
     {
       img: '/TEN-COFFEE3.png',
-      title: 'Postre 3',
+      title: 'Café Americano',
       description:
-        'Ligero y equilibrado, ideal para quienes prefieren un sabor suave.',
+        'Ligero y equilibrado, ideal para quienes prefieren un sabor menos fuerte.',
     },
     {
       img: '/TEN-COFFEE4.png',
@@ -28,8 +28,11 @@ function TendenciesCakes() {
     },
   ];
 
+  // Duplicación para scroll infinito
+  const duplicatedCoffee = [...tendenciesCoffee, ...tendenciesCoffee];
+
   return (
-    <div className="relative w-full overflow-hidden py-4">
+    <div className="relative w-full overflow-hidden py-6">
       <style>{`
         @keyframes scroll {
           0% {
@@ -39,25 +42,22 @@ function TendenciesCakes() {
             transform: translateX(-50%);
           }
         }
+
         .animate-scroll {
           animation: scroll 15s linear infinite;
         }
+
         .animate-scroll:hover {
           animation-play-state: paused;
         }
       `}</style>
 
-      <div className="flex animate-scroll flex-nowrap">
-        <div className="flex flex-nowrap gap-8 px-4">
-          <TendenciesCard tendenciesCoffee={tendenciesCoffee} />
-        </div>
-        <div className="flex flex-nowrap gap-8 px-4">
-          <TendenciesCard tendenciesCoffee={tendenciesCoffee} />
-        </div>
-
+      {/* Carrusel continuo */}
+      <div className="flex flex-nowrap gap-8 animate-scroll px-4">
+        <TendenciesCard tendenciesCoffee={duplicatedCoffee} />
       </div>
     </div>
   );
 }
 
-export { TendenciesCakes };
+export { TendenciesCokies };

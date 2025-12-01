@@ -7,13 +7,15 @@ import { BookingPage } from "./components/pages/bookingPage"
 import { ContactPage } from "./components/pages/contactPage"
 import { Navbar } from "./components/organisms/navbar"
 import { useState } from "react"
-import { ModalLogin } from "./components/organisms/modalLogin"
-import { CartShop } from "./components/organisms/modalCartShop"
+import { ModalLogin } from "./components/organisms/modals/modalLogin"
+import { CartShop } from "./components/organisms/modals/modalCartShop"
 
 // Tendencies sections
-import { TendenciesCoffee } from "./components/organisms/tendenciesCoffee"
-import { TendenciesCokies } from "./components/organisms/tendenciesCokies"
-import { TendenciesCakes } from "./components/organisms/tendenciesCakes"
+import { TendenciesCoffee } from "./components/organisms/home/tendenciesCoffee"
+import { TendenciesCokies } from "./components/organisms/home/tendenciesCokies"
+import { TendenciesCakes } from "./components/organisms/home/tendenciesCakes"
+import { Footer } from "./components/organisms/footer"
+
 
 function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false)
@@ -51,7 +53,6 @@ function App() {
   return (
     <>
       <Navbar setModalIsOpen={setModalIsOpen} setCartShopOpen={setCartShopOpen} />
-
       <MyTemplate>
         {modalIsOpen ? <ModalLogin setModalIsOpen={setModalIsOpen} /> : ''}
         {cartShopOpen ? <CartShop setCartShopOpen={setCartShopOpen} /> : ''}
@@ -75,6 +76,7 @@ function App() {
           ))}
         </Routes>
       </MyTemplate>
+      <Footer/>
     </>
   )
 }

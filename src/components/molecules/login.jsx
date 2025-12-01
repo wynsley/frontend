@@ -1,4 +1,5 @@
 import { FiShoppingCart } from "react-icons/fi";
+import { Button } from "../atoms/buttons";
 
 function LoginNavbar({setModalIsOpen, setCartShopOpen}) {
 
@@ -13,14 +14,17 @@ function LoginNavbar({setModalIsOpen, setCartShopOpen}) {
   
   return (
     <div className="flex items-center gap-6 justify-center ">
-      <button className="cursor-pointer"
-      onClick={handleSubmit}
+      <Button 
+        variant="primary"
+        onClick={handleSubmit}
       >
         <FiShoppingCart  className="text-[#FFBB00] size-6"  />
-      </button>
-      <button className="text-[#ffff] cursor-pointer"
+      </Button>
+      <Button
+        text={'Iniciar Sesión'}
+        variant="primary"
         onClick={handlerSubmit}
-      >Iniciar Sesión</button>
+      />
     </div>
   )
 }

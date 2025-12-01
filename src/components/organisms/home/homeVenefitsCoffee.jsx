@@ -1,9 +1,10 @@
 import { GiCoffeeBeans, GiCoffeeCup, GiCoffeePot, GiCoffeeMug } from "react-icons/gi";
 import { SiCoffeescript, SiBuymeacoffee } from "react-icons/si";
-import { VenefitionsList } from "../molecules/homeVenefyList";
-import { Title } from "../atoms/titles";
+import { VenefitionsList } from "../../molecules/home/homeVenefyList";
+import { Title } from "../../atoms/titles";
+import { ContTitles } from "../../molecules/home/venefitsTitles";
 
-function VenefitionsCoffee() {
+function VenefitsCoffee() {
   const verifyOne = [
     {
       icon: <GiCoffeeBeans className="text-2xl sm:text-3xl lg:text-4xl hover:transform rotate-2" />,
@@ -41,56 +42,30 @@ function VenefitionsCoffee() {
   ]
 
   return (
-    <section className="flex flex-col items-center justify-center gap-15 py-10 mt-10 px-20">
-      <div
+    <section className="flex flex-col items-center justify-center gap-15 py-10 mt-10 px-3 md:px-20">
+  <ContTitles/>
+  <div className="flex flex-col min-[600px]:flex-row gap-10 p-10 items-center justify-center">
+    <VenefitionsList items={verifyOne} />
+    <div className="flex items-center justify-center">
+      <img
+        src="/VENEFITIONS.png"
+        alt="Vaso de cafe"
         className="
-          flex items-center justify-between 
-          px-4 py-3 
-          w-full sm:max-w-screen
-          max-w-[40em]
-          bg-black text-white 
-          shadow-[0_8px_30px_black]
-          gap-4
-        "
-      >
-        <Title
-          level="h3"
-          text={'Todo lo bueno empieza con un café'}
-          weight="normal"
-          align="center"
-          variant="primary"
-        />
-
-        <Title
-          level="h3"
-          text={'cafévital'}
-          weight="normal"
-          align="center"
-          variant="primary"
-
-        />
-      </div>
-      <div className="flex flex-col min-[600px]:flex-row gap-10 p-10 items-center justify-center">
-        <VenefitionsList items={verifyOne} />
-        <div className="flex items-center justify-center">
-          <img
-            src="/VENEFITIONS.png"
-            alt="Vaso de cafe"
-            className="
           w-52 sm:w-64 md:w-80 lg:w-96 xl:w-[400px] 
           min-[700px]:mt-[-3em]
           transition-transform duration-500 
           hover:scale-110
         "
-          />
-        </div>
-        <VenefitionsList 
-          items={verifyTwo} 
-          iconPosition="right"
-        />
-      </div>
-    </section>
+      />
+    </div>
+    <VenefitionsList 
+      items={verifyTwo} 
+      iconPosition="right"
+    />
+  </div>
+</section>
+
   )
 }
 
-export { VenefitionsCoffee }
+export { VenefitsCoffee }

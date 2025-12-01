@@ -1,4 +1,4 @@
-import { Link } from "../atoms/links"
+import { Link } from "../../atoms/links"
 
 function BannerButtons() {
   return (

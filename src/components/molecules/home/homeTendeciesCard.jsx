@@ -1,5 +1,5 @@
-import { Paragraph } from "../atoms/paragraph";
-import { Title } from "../atoms/titles";
+import { Paragraph } from "../../atoms/paragraph";
+import { Title } from "../../atoms/titles";
 
 function TendenciesCard({ tendenciesCoffee }) {
   return (

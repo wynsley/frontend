@@ -1,5 +1,5 @@
 // TendenciesCoffee.jsx - Scroll infinito con 4 cards originales
-import { TendenciesCard } from "../molecules/homeTendeciesCard";
+import { TendenciesCard } from "../../molecules/home/homeTendeciesCard";
 
 function TendenciesCoffee() {
   const tendenciesCoffee = [

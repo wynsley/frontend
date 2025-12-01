@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { Paragraph } from "../atoms/paragraph";
+import { Title } from "../../atoms/titles";
+import { TendenciesDescription } from "../../molecules/home/hometendenciesDesc";
 
 function Tendencies() {
   const menuTendencies = [
@@ -11,7 +12,7 @@ function Tendencies() {
 
   return (
     <section
-  className="
+      className="
     w-full sm:w-screen md:w-[92%] mx-auto 
     flex flex-col items-center justify-center mt-20
     gap-4 sm:gap-5 md:gap-6 
@@ -22,9 +23,13 @@ function Tendencies() {
     shadow-[0_3px_15px_rgba(0,0,0,0.70)]
     px-4 sm:px-0 md:px-0
   "
->
+    >
       <div className="flex flex-col gap-2">
-        <h2 className="text-2xl sm:text-2xl md:text-3xl text-center border-b-3 border-[#A66A06]">{title}</h2>
+        <Title
+          text={title}
+          level="h2"
+          weight="bold"
+          className=" border-b-3 border-[#A66A06]" />
         <hr className="h-0.5 text-[#A66A06] bg-[#A66A06] w-32 sm:w-36 md:w-40 mx-auto" />
       </div>
 
@@ -60,21 +65,11 @@ function Tendencies() {
           scroll-smooth
           snap-x snap-mandatory
   "
->
-  <Outlet />
-</section>
+      >
+        <Outlet />
+      </section>
+      <TendenciesDescription />
 
-
-
-      <div className="flex gap-6 sm:gap-8 md:gap-10 w-full justify-center px-4">
-        <Paragraph 
-          text={'Descubre los cafés, galletas y postres que están conquistando a todos con su sabor irresistible.'}
-          variant="secondary"
-          size="medium"
-          align="center"
-          className=" w-full sm:w-[90%] md:w-[80%] lg:w-200"/>
-          
-      </div>
     </section>
   );
 }

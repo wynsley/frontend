@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { Button } from "../atoms/buttons"
-import { Title } from "../atoms/titles"
-import { Link } from "../atoms/links"
-import { FormItem } from "../molecules/formItem"
+import { Button } from "../../atoms/buttons"
+import { Title } from "../../atoms/titles"
+import { Link } from "../../atoms/links"
+import { FormItem } from "../../molecules/formItem"
 
 
 function ModalLogin({ setModalIsOpen }) {

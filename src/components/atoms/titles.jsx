@@ -14,7 +14,7 @@ function Title({
     default: 'text-black',
     primary: 'text-white',
     secondary: 'text-[#FFBB00]',
-    danger: 'text-red-500',
+    danger: 'text-gray-500',
   };
 
   const alignments = {
@@ -25,8 +25,8 @@ function Title({
 
   const defaultByLevel = {
   h1: 'text-xl sm:text-2xl md:text-3xl',
-  h2: 'text-lg sm:text-xl md:text-2xl',
-  h3: 'text-base sm:text-lg md:text-xl',
+  h2: 'text-[1.3em] sm:text-[1.7em] md:text-[1.9em]',
+  h3: 'text-base sm:text-[1.2em] md:text-xl',
   h4: 'text-sm sm:text-base md:text-lg',
   h5: 'text-xs sm:text-sm md:text-base',
   h6: 'text-[10px] sm:text-xs md:text-sm',

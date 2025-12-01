@@ -25,7 +25,7 @@ function Paragraph ({
   const sizes = {
     small:  "text-[0.6em] sm:text-[.7em] md:text-[.9em]",
     medium: "text-[.7em] sm:text-[.9em] md:text-[1em]",
-    large:  "text-[1em] sm:text-[1.1em] md:text-[1.3em] lg:text-[1.6em]",
+    large:  "text-[.8em] sm:text-[1em] md:text-[1.1em] lg:text-[1.2em]",
   };
 
   const weights = {
