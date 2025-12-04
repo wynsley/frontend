@@ -15,6 +15,7 @@ import { TendenciesCoffee } from "./components/organisms/home/tendenciesCoffee"
 import { TendenciesCokies } from "./components/organisms/home/tendenciesCokies"
 import { TendenciesCakes } from "./components/organisms/home/tendenciesCakes"
 import { Footer } from "./components/organisms/footer"
+import { WhatsAppButton } from "./components/atoms/WhatsAppButton"
 
 
 function App() {
@@ -77,6 +78,7 @@ function App() {
         </Routes>
       </MyTemplate>
       <Footer/>
+      <WhatsAppButton />
     </>
   )
 }
